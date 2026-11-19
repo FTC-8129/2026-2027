@@ -19,7 +19,7 @@ import org.firstinspires.ftc.robotcore.external.navigation.UnnormalizedAngleUnit
  * Pinpoint's X pod is the parallel pod and its Y pod is the perpendicular pod.
  */
 public class TwoWheelTrackingLocalizer implements Localizer {
-    public static double TICKS_PER_REV = 0;
+    public static double TICKS_PER_REV = 537.7;
     public static double WHEEL_RADIUS = 2.05; // in
     public static double GEAR_RATIO = 1; // output (wheel) speed / input (encoder speed)
 
@@ -41,7 +41,7 @@ public class TwoWheelTrackingLocalizer implements Localizer {
                 GoBildaPinpointDriver.GoBildaOdometryPods.goBILDA_4_BAR_POD);
         pinpoint.setEncoderDirections(
                 GoBildaPinpointDriver.EncoderDirection.FORWARD,
-                GoBildaPinpointDriver.EncoderDirection.FORWARD);
+                GoBildaPinpointDriver.EncoderDirection.REVERSED);
         pinpoint.resetPosAndIMU();
     }
 

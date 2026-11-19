@@ -2,6 +2,7 @@ package org.firstinspires.ftc.teamcode.drive;
 
 import com.acmerobotics.dashboard.config.Config;
 import com.qualcomm.robotcore.hardware.PIDFCoefficients;
+import com.qualcomm.hardware.rev.RevHubOrientationOnRobot;
 
 /*
  * Constants shared between multiple drive types.
@@ -22,7 +23,7 @@ public class DriveConstants {
     /*
      * These are motor constants that should be listed online for your motors.
      */
-    public static final double TICKS_PER_REV = 537.6;
+    public static final double TICKS_PER_REV = 537.7;
     public static final double MAX_RPM = 312;
 
     /*
@@ -89,8 +90,8 @@ public class DriveConstants {
      */
     public static double MAX_VEL = 56.931942068354225;
     public static double MAX_ACCEL = 56.931942068354225;
-    public static double MAX_ANG_VEL = Math.toRadians(238.44736842105263);
-    public static double MAX_ANG_ACCEL = Math.toRadians(238.44736842105263);
+    public static double MAX_ANG_VEL = Math.toRadians(210.44903225806448);
+    public static double MAX_ANG_ACCEL = Math.toRadians(210.44903225806448);
 
 
     public static double encoderTicksToInches(double ticks) {
@@ -105,4 +106,10 @@ public class DriveConstants {
       // see https://docs.google.com/document/d/1tyWrXDfMidwYyP_5H4mZyVgaEswhOC35gvdmP-V-5hA/edit#heading=h.61g9ixenznbx
       return 32767 / ticksPerSecond;
     }
+
+    public static RevHubOrientationOnRobot.LogoFacingDirection LOGO_FACING_DIR =
+            RevHubOrientationOnRobot.LogoFacingDirection.BACKWARD;
+
+    public static RevHubOrientationOnRobot.UsbFacingDirection USB_FACING_DIR =
+            RevHubOrientationOnRobot.UsbFacingDirection.RIGHT;
 }
